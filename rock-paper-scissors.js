@@ -1,7 +1,7 @@
 
 // function that randomly returns "rock", "paper" or "scissors"
-const humanScore = 0;
-const computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
 function getComputerChoice(){
     let random_num = Math.random();
@@ -47,9 +47,10 @@ function playRound(humanChoice, computerChoice){
     } else {
         console.log("Try again!");
     }
+    return ("Computer Score: " + computerScore + "\n" + "User Score: " + humanScore);
 }
-console.log(getComputerChoice());
-console.log(getHumanChoice());
+/*console.log(getComputerChoice());
+console.log(getHumanChoice()); */
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 console.log(playRound(humanSelection, computerSelection));
