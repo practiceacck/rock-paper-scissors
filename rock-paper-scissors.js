@@ -49,8 +49,17 @@ function playRound(humanChoice, computerChoice){
     }
     return ("Computer Score: " + computerScore + "\n" + "User Score: " + humanScore);
 }
+
+function playGame(humanChoice, computerChoice){
+    for (let i=0; i<5; i++){
+        playRound(humanChoice, computerChoice);
+    }
+    return ("Computer Score: " + computerScore + "\n" + "User Score: " + humanScore);
+}
 /*console.log(getComputerChoice());
 console.log(getHumanChoice()); */
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-console.log(playRound(humanSelection, computerSelection));
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice();
+ // console.log(playRound(humanSelection, computerSelection));
+
+ console.log(playGame(humanSelection, computerSelection))
